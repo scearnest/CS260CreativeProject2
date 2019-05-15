@@ -12,25 +12,28 @@
 
       <div class="options_container">
 
-        <div id="root">
-          <ul>
-            <!-- Loop through each name in names and render it. This will create a set of li elements. The v-text
-            directive will set the list element value to the name -->
-            <li v-for="name in names" v-text="name"></li>
-          </ul>
-          <!-- Let the user enter a new name and bind it to the newName property -->
-          <input type="text" v-model="newName">
-          <!-- Create an event handler for the click event -->
-          <button @click="addName">Add Name</button>
+        <h3> Please enter what ingredients you have seperated by a single space </h3>
+        <input type="text" id = "searchbar">
+        <button @click="add" id = "searchbutton">Add</button>
+
+        <div class="dropdown">
+          <button class="dropbtn">Health Filters</button>
+          <div class="dropdown-content">
+            <label class = "drop"> <input type="radio" href="#" class = "drop-item"> Alcohol-free </label>
+
+            <input type="radio" href="#" class = "drop-item"> Lactose Intolerant </input>
+            <input type="radio" href="#" class = "drop-item"> Gluten-free </input>
+            <input type="radio" href="#" class = "drop-item"> Kosher </input>
+            <input type="radio" href="#" class = "drop-item"> Vegan </input>
+            <input type="radio" href="#" class = "drop-item"> Vegetarian </input>
+          </div>
         </div>
 
+        <h4>calorie limit: </h4>
+        <input type="text" id = "calbar">
+        <button @click="seach" id = "search">Search</button>
 
-        <div class="option_health">
-          <p>greasy or healthy</p>
-        </div>
-        <div  class="option_cals">
-          <p>num_calories</p>
-        </div>
+
 
       </div>
 
