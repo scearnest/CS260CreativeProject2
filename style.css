@@ -52,6 +52,14 @@ h4 {
 
 }
 
+#search {
+  width: 60%;
+  height: 200%;
+  background-color: #4CAF50;
+  border: 0px;
+  margin: 2.5px;
+}
+
 #searchbutton:hover {
   background-color: #9CAF5F;
 }

@@ -1,3 +1,19 @@
+ingredientList = "";
+var ingredient_list = [];
+
+function add() {
+
+  ingredientList += document.getElementById("searchbar").value;
+  ingredient_list.push(document.getElementById("searchbar").value);
+  ingredientList += " ";
+  document.getElementById("searchbar").value = "";
+
+  console.log(ingredientList);
+
+  addList();
+
+}
+
 window.onload = function() {
   document.getElementById("search").addEventListener("click", async function(event) {
     event.preventDefault();
@@ -38,7 +54,7 @@ function getHealthString() {
 
   if(document.getElementById("alcohol").checked)
   {
-    health += "&health=alcohol-free	";
+    health += "&health=alcohol-free";
   }
   if(document.getElementById("lactose").checked)
   {
@@ -62,6 +78,23 @@ function getHealthString() {
   }
 
   return health;
+}
+
+function addList()
+{
+  list = "<ul>";
+
+  size = ingredient_list.length;
+  for(i = 0; i < size; ++i)
+  {
+    list += "<li>" + ingredient_list[i] + "</li>";
+  }
+
+  list += "</ul>";
+
+  document.getElementById("ingredient_list").innerHTML = list;
+
+
 }
 
 // function getCalories() {

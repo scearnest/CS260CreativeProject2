@@ -13,23 +13,23 @@
       <div class="options_container">
         <h1 id="business">Dirty Baking</h1>
         <div class="prompt">
-          <h3>Please enter what ingredients you have seperated by a single space </h3>
+          <h3>Please add your ingredients, choose your filters, and hit search. </h3>
         </div>
         <div class="search_container">
           <input type="text" id = "searchbar">
-          <button onClick="add" id = "searchbutton">Add</button>
+          <button onClick="add()" id = "searchbutton">Add</button>
         </div>
         <div class="health_container">
           <div class="dropdown">
             <button class="dropbtn">Health Filters</button>
             <div class="dropdown-content">
               <!-- <label class = "drop"> </label> -->
-              <input type="radio" href="#" class = "drop-item" id = "alcohol"> Alcohol-free </input>
-              <input type="radio" href="#" class = "drop-item" id = "lactose"> Lactose Intolerant </input>
-              <input type="radio" href="#" class = "drop-item" id = "gluten"> Gluten-free </input>
-              <input type="radio" href="#" class = "drop-item" id = "kosher"> Kosher </input>
-              <input type="radio" href="#" class = "drop-item" id = "vegan"> Vegan </input>
-              <input type="radio" href="#" class = "drop-item" id = "vegetarian"> Vegetarian </input>
+              <input type="radio" href="#" class = "drop-item" id = "alcohol" name="item"> Alcohol-free </input>
+              <input type="radio" href="#" class = "drop-item" id = "lactose" name="item"> Lactose Intolerant </input>
+              <input type="radio" href="#" class = "drop-item" id = "gluten" name="item"> Gluten-free </input>
+              <input type="radio" href="#" class = "drop-item" id = "kosher" name="item"> Kosher </input>
+              <input type="radio" href="#" class = "drop-item" id = "vegan" name="item"> Vegan </input>
+              <input type="radio" href="#" class = "drop-item" id = "vegetarian" name="item"> Vegetarian </input>
             </div>
           </div>
         </div>
@@ -37,6 +37,10 @@
           <!-- <h4>calorie limit: </h4>
           <input type="text" id = "calbar"> -->
           <button onClick="search" id = "search">Search</button>
+        </div>
+
+
+        <div id="ingredient_list">
         </div>
 
 
