@@ -14,24 +14,24 @@
 
         <h3> Please enter what ingredients you have seperated by a single space </h3>
         <input type="text" id = "searchbar">
-        <button @click="add" id = "searchbutton">Add</button>
+        <button onclick="add" id = "searchbutton">Add</button>
 
         <div class="dropdown">
           <button class="dropbtn">Health Filters</button>
           <div class="dropdown-content">
-            <label class = "drop"> <input type="radio" href="#" class = "drop-item"> Alcohol-free </label>
+            <input type="radio" href="#" class = "drop-item" id = "alcohol"> Alcohol-free </input>
+            <input type="radio" href="#" class = "drop-item" id = "lactose"> Lactose Intolerant </input>
+            <input type="radio" href="#" class = "drop-item" id = "gluten"> Gluten-free </input>
+            <input type="radio" href="#" class = "drop-item" id = "kosher"> Kosher </input>
+            <input type="radio" href="#" class = "drop-item" id = "vegan"> Vegan </input>
+            <input type="radio" href="#" class = "drop-item" id = "vegetarian"> Vegetarian </input>
 
-            <input type="radio" href="#" class = "drop-item"> Lactose Intolerant </input>
-            <input type="radio" href="#" class = "drop-item"> Gluten-free </input>
-            <input type="radio" href="#" class = "drop-item"> Kosher </input>
-            <input type="radio" href="#" class = "drop-item"> Vegan </input>
-            <input type="radio" href="#" class = "drop-item"> Vegetarian </input>
           </div>
         </div>
 
-        <h4>calorie limit: </h4>
-        <input type="text" id = "calbar">
-        <button @click="seach" id = "search">Search</button>
+        <!-- <h4>calorie limit: </h4>
+        <input type="text" id = "calbar"> -->
+        <button onClick="search" id = "search">Search</button>
 
 
 
