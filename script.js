@@ -17,25 +17,11 @@ function add() {
 window.onload = function() {
   document.getElementById("search").addEventListener("click", async function(event) {
     event.preventDefault();
-    // const value = document.getElementById("weatherInput").value;
-    // if (value === "")
-    // return;
-    // console.log(value);
-
-
-    ingredients = document.getElementById("searchbar").value;
-
+    
     health = getHealthString();
-    // calories = getCalories();
-
-
-
-    const url = "https://api.edamam.com/search?q=" + ingredients + "&app_id=f4381c19&app_key=8e9220e0d74298ab22143e7237ab941f" + health;
-
+    const url = "https://api.edamam.com/search?q=" + ingredientList + "&app_id=f4381c19&app_key=8e9220e0d74298ab22143e7237ab941f" + health;
     console.log(url);
 
-    // "https://api.edamam.com/search? " + value + ",US&units=imperial" +
-    // "&APPID=2992349419d0a9f42eb9de5f88bad8b4";
     try {
       const response = await fetch(url);
       console.log("response: ", response);
