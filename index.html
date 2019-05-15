@@ -11,27 +11,33 @@
     <div class="parent">
 
       <div class="options_container">
-
-        <h3> Please enter what ingredients you have seperated by a single space </h3>
-        <input type="text" id = "searchbar">
-        <button onclick="add" id = "searchbutton">Add</button>
-
-        <div class="dropdown">
-          <button class="dropbtn">Health Filters</button>
-          <div class="dropdown-content">
-            <input type="radio" href="#" class = "drop-item" id = "alcohol"> Alcohol-free </input>
-            <input type="radio" href="#" class = "drop-item" id = "lactose"> Lactose Intolerant </input>
-            <input type="radio" href="#" class = "drop-item" id = "gluten"> Gluten-free </input>
-            <input type="radio" href="#" class = "drop-item" id = "kosher"> Kosher </input>
-            <input type="radio" href="#" class = "drop-item" id = "vegan"> Vegan </input>
-            <input type="radio" href="#" class = "drop-item" id = "vegetarian"> Vegetarian </input>
-
+        <h1 id="business">Dirty Baking</h1>
+        <div class="prompt">
+          <h3>Please enter what ingredients you have seperated by a single space </h3>
+        </div>
+        <div class="search_container">
+          <input type="text" id = "searchbar">
+          <button onClick="add" id = "searchbutton">Add</button>
+        </div>
+        <div class="health_container">
+          <div class="dropdown">
+            <button class="dropbtn">Health Filters</button>
+            <div class="dropdown-content">
+              <!-- <label class = "drop"> </label> -->
+              <input type="radio" href="#" class = "drop-item" id = "alcohol"> Alcohol-free </input>
+              <input type="radio" href="#" class = "drop-item" id = "lactose"> Lactose Intolerant </input>
+              <input type="radio" href="#" class = "drop-item" id = "gluten"> Gluten-free </input>
+              <input type="radio" href="#" class = "drop-item" id = "kosher"> Kosher </input>
+              <input type="radio" href="#" class = "drop-item" id = "vegan"> Vegan </input>
+              <input type="radio" href="#" class = "drop-item" id = "vegetarian"> Vegetarian </input>
+            </div>
           </div>
         </div>
-
-        <!-- <h4>calorie limit: </h4>
-        <input type="text" id = "calbar"> -->
-        <button onClick="search" id = "search">Search</button>
+        <div class="calories_container">
+          <!-- <h4>calorie limit: </h4>
+          <input type="text" id = "calbar"> -->
+          <button onClick="search" id = "search">Search</button>
+        </div>
 
 
 
@@ -84,17 +90,11 @@
 
     <ul class="nav justify-content-center">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
+        <a class="nav-link active" target="_blank" href="https://github.com/scearnest/CS260CreativeProject2">GitHub Repository</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#"></a>
+      </li> -->
     </ul>
     <!-- <button id="submit" type="submit">Search</button> -->
 
