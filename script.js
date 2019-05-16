@@ -36,13 +36,28 @@ window.onload = function() {
       console.log(json.hits.length);
       for (var i=0; i < json.hits.length; i++) {
         my_recipes += '<div class="individual_results"><div class="img_recipe_container">'
-        my_recipes += '<img class="recipe_image" src="' + json.hits[i].recipe.image + '"></div>';
-        my_recipes += '<div class="recipe_text"><p>' + json.hits[i].recipe.label + "</p></div></div>";
+        my_recipes += '<a href="' + json.hits[i].recipe.url + '" target="_blank">'
+        my_recipes += '<img class="recipe_image" src="' + json.hits[i].recipe.image + '"></a></div>';
+        my_recipes += '<div class="recipe_text"><p>' + json.hits[i].recipe.label + "</p></div>";
+
+        var diets = "<ul>";
+        for (var j=0; j < json.hits[i].recipe.dietLabels.length; j++) {
+          diets += '<li>' + json.hits[i].recipe.dietLabels[j] + '</li>';
+        }
+        var health = "<ul>";
+        for (var q=0; q < json.hits[i].recipe.healthLabels.length; q++) {
+          health += '<li>' + json.hits[i].recipe.healthLabels[q] + '</li>';
+        }
+        console.log(diets);
+        diets += '</ul>'
+        health += '</ul>'
+        my_recipes += '<div class="diet">' + diets + '</div>'
+        my_recipes += '<div class="recipe_health">' + health + '</div></div>'
       }
 
       console.log(my_recipes)
-
-      document.getElementById("my_recipes_containter").innerHTML = my_recipes;
+      document.getElementById('my_recipes_containter').insertAdjacentHTML('beforeend', my_recipes);
+      // document.getElementById("my_recipes_containter").innerHTML = my_recipes;
     }
     catch (e) {
       console.log("error");

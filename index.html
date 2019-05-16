@@ -20,28 +20,28 @@
           <button onClick="add()" id = "searchbutton">Add</button>
         </div>
         <div class="health_container">
-          <div class="dropdown">
-            <button class="dropbtn">Health Filters</button>
-            <div class="dropdown-content">
-              <!-- <label class = "drop"> </label> -->
-              <input type="radio" href="#" class = "drop-item" id = "alcohol" name="item"> Alcohol-free </input>
-              <input type="radio" href="#" class = "drop-item" id = "lactose" name="item"> Lactose Intolerant </input>
-              <input type="radio" href="#" class = "drop-item" id = "gluten" name="item"> Gluten-free </input>
-              <input type="radio" href="#" class = "drop-item" id = "kosher" name="item"> Kosher </input>
-              <input type="radio" href="#" class = "drop-item" id = "vegan" name="item"> Vegan </input>
-              <input type="radio" href="#" class = "drop-item" id = "vegetarian" name="item"> Vegetarian </input>
+          <div class="health_filter_container">
+            <div class="dropdown">
+              <button class="dropbtn">Health Filters</button>
+              <div class="dropdown-content">
+                <!-- <label class = "drop"> </label> -->
+                <input type="radio" href="#" class = "drop-item" id = "alcohol" name="item"> Alcohol-free </input>
+                <input type="radio" href="#" class = "drop-item" id = "lactose" name="item"> Lactose Intolerant </input>
+                <input type="radio" href="#" class = "drop-item" id = "gluten" name="item"> Gluten-free </input>
+                <input type="radio" href="#" class = "drop-item" id = "kosher" name="item"> Kosher </input>
+                <input type="radio" href="#" class = "drop-item" id = "vegan" name="item"> Vegan </input>
+                <input type="radio" href="#" class = "drop-item" id = "vegetarian" name="item"> Vegetarian </input>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="calories_container">
-          <!-- <h4>calorie limit: </h4>
-          <input type="text" id = "calbar"> -->
-          <button onClick="search" id = "search">Search</button>
+          <div class="submit_container">
+            <button onClick="search" id = "search">Search</button>
+            <h6>Ingredients in Search</h6>
+            <div id="ingredient_list"></div>
+          </div>
         </div>
 
 
-        <div id="ingredient_list">
-        </div>
 
 
 
@@ -49,7 +49,23 @@
 
       <!-- results side, split up into containers, each one being a recipe -->
       <div class="results_container" id="my_recipes_containter">
+        <div class="heading_bar">
+          <div class="individual_results">
+            <div class="img_recipe_container">
+              <p>Image w/ Link</p>
+            </div>
+            <div class="recipe_text" style="padding-left:10px">
+              <p>Title</p>
+            </div>
+            <div class="diet">
+              <p>Diets</p>
+            </div>
+            <div class="recipe_health">
+              <p>Health Labels</p>
+            </div>
+          </div>
 
+        </div>
       </div>
 
     </div>
@@ -58,12 +74,7 @@
       <li class="nav-item">
         <a class="nav-link active" target="_blank" href="https://github.com/scearnest/CS260CreativeProject2">GitHub Repository</a>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="#"></a>
-      </li> -->
     </ul>
-    <!-- <button id="submit" type="submit">Search</button> -->
-
 
       <script text="type/javascript" src="./script.js"> </script>
       <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
