@@ -5,7 +5,7 @@ function add() {
 
   ingredientList += document.getElementById("searchbar").value;
   ingredient_list.push(document.getElementById("searchbar").value);
-  ingredientList += " ";
+  ingredientList += "%20";
   document.getElementById("searchbar").value = "";
 
   console.log(ingredientList);
@@ -17,16 +17,32 @@ function add() {
 window.onload = function() {
   document.getElementById("search").addEventListener("click", async function(event) {
     event.preventDefault();
-    
+
     health = getHealthString();
     const url = "https://api.edamam.com/search?q=" + ingredientList + "&app_id=f4381c19&app_key=8e9220e0d74298ab22143e7237ab941f" + health;
     console.log(url);
 
     try {
+      // const response = await fetch(url);
+
+      // const json = await response.json();
+
       const response = await fetch(url);
       console.log("response: ", response);
       const json = await response.json();
       console.log("json: ", json);
+
+      var my_recipes = "";
+      console.log(json.hits.length);
+      for (var i=0; i < json.hits.length; i++) {
+        my_recipes += '<div class="individual_results"><div class="img_recipe_container">'
+        my_recipes += '<img class="recipe_image" src="' + json.hits[i].recipe.image + '"></div>';
+        my_recipes += '<div class="recipe_text"><p>' + json.hits[i].recipe.label + "</p></div></div>";
+      }
+
+      console.log(my_recipes)
+
+      document.getElementById("my_recipes_containter").innerHTML = my_recipes;
     }
     catch (e) {
       console.log("error");
